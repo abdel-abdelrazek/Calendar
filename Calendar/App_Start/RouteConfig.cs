@@ -13,6 +13,9 @@ namespace Calendar
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            // To enable attribute routing
+            routes.MapMvcAttributeRoutes();
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

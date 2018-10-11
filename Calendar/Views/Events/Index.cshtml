@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Calendar.ViewModel.EventViewModel>
+
+@{
+    ViewBag.Title = "Calendar";
+}
+
+<h2>Events (@Model.Count()) : </h2>
+
+<div class="col">
+    @if (ViewBag.isAdmin == "Yes")
+    {
+        @Html.ActionLink("Manage Roles", "Index", "ManageUsers")
+        @Html.ActionLink("-", "", "")
+    }
+    @Html.ActionLink("Create New", "CustomCreat")
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-7 ">
+            <input id="txtEventSearch" class="form-control mr-sm-2" type="text" placeholder="Search" maxlength="25" />
+            <br />
+            <div id="dvEventsList">
+                @Html.Partial("Listing", Model)
+            </div>
+        </div>
+        <div class="col">
+            <h3> Event Details</h3>
+            <hr />
+            <div id="dvEventDetails">
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/rxjs")
+    @Scripts.Render("~/bundles/searchtextbox")
+
+}
+
+
+

@@ -1,7 +1,15 @@
-﻿body {
+﻿/* START - Body - START*/
+body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
+/* END - Body - END*/
+
+/* START - All - START*/
+* {
+    font-family: cursive !important;
+}
+/* END - All - END*/
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
@@ -22,3 +30,135 @@ select,
 textarea {
     max-width: 280px;
 }
+
+#imgloader {
+    display: none;
+    z-index: 99;
+    position: fixed;
+    left: 45%;
+    top: 45%;
+}
+
+
+/* START - ScrolBar - START*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    display:none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #888;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #EB6864;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* END - ScrolBar - END*/
+
+
+/* START - Boody-Container - START*/
+.body-Container {
+    min-height: 425px;
+}
+/* END - Boody-Container - END*/
+
+
+/* START - scrolable-container - START*/
+.scrolable-container {
+    max-height: 275px;
+    min-height: 275px;
+    overflow-y: scroll;
+    border-radius:15px;
+}
+/* END - scrolable-container - END*/
+
+/* START - evenOddColored-table - START*/
+table.evenOddColored tr:nth-child(even) {
+    background: #8888881c;
+}
+
+table.evenOddColored tr:nth-child(odd) td {
+    background: #FFF;
+}
+/* END - evenOddColored-table - END*/
+
+/* START - tables-th - START*/
+table tr:nth-child(odd) th {
+    background:  #eb686417;
+}
+/* END - tables-th - END*/
+
+/* START -  EVENTS CONTAINER - START */
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 15px;
+    background-color: #cccccc57;
+    min-height: 340px
+}
+
+    .events-container > div {
+        width: 130px;
+        margin: 10px;
+        text-align: center;
+        line-height: 50px;
+        font-size: 30px;
+        height: 25%;
+    }
+
+.month {
+    border-radius: 5px;
+    width: 100%;
+    background: #e66b6b;
+    text-align: center;
+}
+
+    .month ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+        .month ul li {
+            color: white;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+/* END - ONE EVENT CONTAINER - END */
+
+/* START - EVENT ELEMENT CONTAINER - START */
+.event-Element {
+    background-color: white;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: black;
+    font-size: 18px;
+    text-transform: lowercase;
+    text-decoration: underline;
+}
+/* END - EVENT ELEMENT CONTAINER - END */
+
+/* START - YEAR - START */
+.year {
+font-size:18px;
+font-weight: 900;
+}
+/* END - YEAR - END */
+
+/* START - navbar-positioning - START */
+.navbar-positioning {
+    top: 0;
+    position: absolute;
+    width: 100%;
+}
+/* END - navbar-positioning - END */

@@ -1,0 +1,29 @@
+﻿@model Calendar.ViewModel.CustomEventViewModel
+
+@{
+    ViewBag.Title = "Calendar";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <tr>
+                    <th>
+                        Create Event
+                    </th>
+                </tr>
+            </table>
+            @Html.Partial("Create", Model.EventEntity)
+        </div>
+        <div class="col-7">
+            <div id="dvEventsList">
+                @Html.Partial("ListingForCreate", Model.Events)
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

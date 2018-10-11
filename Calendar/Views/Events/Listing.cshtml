@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Calendar.ViewModel.EventViewModel>
+
+<div class="scrolable-container">
+    <div class="events-container">
+        @foreach (var item in Model)
+        {
+            <div class="month">
+                <ul>
+                    <li>
+                            @Html.DisplayFor(modelItem => item.StartDateMonth)<br>
+                            <span class="year">@Html.DisplayFor(modelItem => item.StartDate.Year)</span>
+                    </li>
+                    <li>
+                        <div class="event-Element">
+                            @Html.DisplayFor(modelItem => item.Title)
+                            @Ajax.ActionLink("Details", "Details/"+ item.Id, "Events", new AjaxOptions
+                          {
+                              UpdateTargetId = "dvEventDetails",
+                              InsertionMode = InsertionMode.Replace,
+                              HttpMethod = "GET",
+                              LoadingElementId = "imgloader",
+                          }, new { id="lnkEventsDetails", @class = "btn btn-default" })
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        }
+    </div>
+</div>
+

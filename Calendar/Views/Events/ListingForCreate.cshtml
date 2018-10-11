@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Calendar.ViewModel.EventViewModel>
+
+<div>
+    <table class="table " id="tblEvents">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndDate)
+            </th>
+        </tr>
+    </table>
+</div>
+
+<div class="scrolable-container">
+    <table class="table evenOddColored">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SubDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartDateFormated)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndDateStringFormated)
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
